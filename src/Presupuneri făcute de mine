@@ -1,0 +1,7 @@
+1. În exemplul dat în enunț, avem doar oră și minute, deci am presupus că toate activitățile încep și se termină la minute exacte
+și nu trebuie să luăm în considerare secundele. Dacă se ținea cont și de secunde, atunci aveam doi vectori de dimensiune egală cu toate
+secundele dintr-o zi în locul vectorilor de dimensiune egală cu toate minutele dintr-o zi. În acel caz, această metodă de rezolvare
+cu marcarea timpului în care cele două persoane sunt ocupate într-un "vector de timp" nu mai era eficientă, deoarece dimensiunea
+vectorului era prea mare. Totuși, având o problemă de modelare a programului dintr-o zi pentru două persoane, am considerat că este mai
+natural să las minutul ca fiind cea mai mică unitate de măsură a timpului, deoarece oamenii nu se folosesc de secunde când își fac programul. :)
+

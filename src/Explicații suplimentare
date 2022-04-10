@@ -1,0 +1,24 @@
+1. Ar fi fost mai eficient din punct de vedere al spațiului dacă mă foloseam de doi "vectori de timp" de dimensiune egală cu diferența în minute
+de la cea mai mică oră la care poate începe o întâlnire dintre cele două persoane până la cea mai mare oră la care se poate termina o întâlnire
+între acestea. Astfel, un minut dintr-o zi se scala relativ la primul minut în care cele două persoane se pot întâlni.
+De exemplu, dacă în fișierul de input aveam:
+    calendar1 range limits: ['00:00','23:00']
+    ....
+    calendar2 range limits: ['00:30','23:59']
+aș fi considerat minutul corespunzător orei 00:30 ca fiind minutul de pe prima poziție din vector și minutul corespunzător orei 23:59 ca fiind
+minutul de pe ultima poziție din vector. Deci, scalarea s-ar fi făcut scăzând valoarea 30 din conversia în minute a unei ore,
+iar vectorii de timp ar fi avut o dimensiune mai mică.
+Totuși, nu am procedat astfel, deoarece în fișierul de input avem datele de intrare corespunzătoare pentru "calendars range limits" după datele de intrare
+corespunzătoare pentru "booked calendar1" și "booked calendar2", deci marcarea pozițiilor ocupate din vectorul de minute ar trebui făcută înaintea
+determinării limitelor cele mai restrictive ale calendarului.
+Ca soluție de compromis, am lăsat un vector de dimensiunea tuturor minutelor dintr-o zi, deoarece nu adaugă o complexitate mare de spațiu algoritmului
+și nu trebuie făcute operații suplimentare în acest mod.
+Mai departe, parcurgerea vectorului de minute se va face doar în intervalul
+[cea mai mică oră de start de la care poate începe o întâlnire, cea mai mare oră de finish la care se poate termina o întâlnire],
+deci nu vom parcurge tot vectorul de minute.
+
+
+2. Am ales să folosesc numere întregi de maxim 4 cifre în reprezentarea orei (ultimele două cifre reprezintă minutele, iar primele două cifre reprezintă
+ora), deoarece un element de tip int are dimensiunea 4 bytes, iar un element de tip LocalTime are 8 bytes. Tipul LocalTime are o dimensiune dublă.
+Din moment ce oricum avem o complexitate destul de mare de spațiu datorată vectorilor de minute, am preferat să folosesc tipuri de date de dimensiune
+mai mică pentru reprezentarea orei.
