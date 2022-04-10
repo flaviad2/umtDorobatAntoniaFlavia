@@ -1,0 +1,5 @@
+booked calendar1: [['9:00','10:30'], ['10:30','13:15'], ['16:20','18:00']]
+calendar1 range limits: ['9:00','18:30']
+booked calendar2: [['10:10','11:30'], ['11:30','14:35'], ['14:40','15:40'], ['16:00','18:30']]
+calendar2 range limits: ['10:00','18:30']
+Meeting Time Minutes: 30
